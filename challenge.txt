@@ -1,0 +1,18 @@
+Die Aufgabe: Stein-Schere-Papier
+
+Baue ein Spiel, in dem zwei Spieler mit verschiedenen Strategien Stein-Schere-Papier gegeneinander spielen. Wer gewinnt häufiger?
+
+- Schere zerschneidet Papier (Scissors beats paper)
+- Stein zerschlägt Schere (Rock beats scissors)
+- Papier umwickelt Stein (Paper beats rock)
+- Wählen beide Spieler das Gleiche, ist es ein Unentschieden (Tie).
+
+Implementiere zwei einfache Spieler:
+Spieler A) wählt immer Papier
+Spieler B) trifft zufällige Wahl
+
+Das Spiel sollte beide Spieler 100x gegeneinander spielen lassen. Die Ausgabe des Programms soll folgendes Format haben (mit ggf. anderen Zahlen):
+"Player A wins 31 of 100 games"
+"Player B wins 37 of 100 games"
+"Tie: 32 of 100 games"
+ Der Code sollte gründlich mit RSpec getestet sein.
