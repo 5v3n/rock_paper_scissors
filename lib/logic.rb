@@ -1,4 +1,6 @@
-class RockScissorsPaper
+require_relative './rock_paper_scissors.rb'
+
+class RockPaperScissors::Logic
   BEATS = {scissors: :paper, paper: :rock, rock: :scissors}
   def self.winner?(choice_a, choice_b)
     arguments_valid? [choice_a, choice_b]
