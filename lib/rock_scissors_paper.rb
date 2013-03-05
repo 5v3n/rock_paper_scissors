@@ -1,7 +1,7 @@
 class RockScissorsPaper
   BEATS = {scissors: :paper, paper: :rock, rock: :scissors}
   def self.winner?(choice_a, choice_b)
-    #TODO check if arguements are valid
+    arguments_valid? [choice_a, choice_b]
     if choice_a == choice_b
       nil
     elsif BEATS[choice_a] == choice_b
@@ -9,5 +9,17 @@ class RockScissorsPaper
     else
       choice_b
     end
+  end
+private
+  def self.arguments_valid?(params)
+    params.each do |param|
+      raise ArgumentError, error_message(param) unless BEATS.include? param
+    end
+  end
+  def self.valid_arguments()
+    BEATS.flatten.uniq
+  end
+  def self.error_message(param)
+    "parameter '#{param ||= 'nil'}' invalid - valid arguments are #{valid_arguments}"
   end
 end

@@ -29,13 +29,13 @@ describe RockScissorsPaper do
       let(:unknown_input_b){'4red'}
       let(:known_argument){RockScissorsPaper::BEATS.to_a.shuffle.pop.first}
       it "handles nil,nil" do
-        lambda {RockScissorsPaper.winner?(nil, nil)}.should raise_error(ArgumentError)
+        lambda {RockScissorsPaper.winner?(nil, nil)}.should raise_error(ArgumentError, /nil/)
       end
       it "handles nil with known argument" do
-        lambda {RockScissorsPaper.winner?(nil, known_argument)}.should raise_error(ArgumentError)
+        lambda {RockScissorsPaper.winner?(known_argument, nil)}.should raise_error(ArgumentError, /nil/)
       end
       it "handles unknown input / input that is not mapped" do
-        lambda {RockScissorsPaper.winner?(unknown_input_a, unknown_input_b)}.should raise_error(ArgumentError)
+        lambda {RockScissorsPaper.winner?(unknown_input_a, unknown_input_b)}.should raise_error(ArgumentError, /#{unknown_input_a}/)
       end
     end
   end
