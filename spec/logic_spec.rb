@@ -2,7 +2,7 @@ require 'spec_helper'
 require_relative '../lib/logic.rb'
 
 describe RockPaperScissors::Logic do
-  let(:scissors){:scissors}
+  let(:scissors){:scissors} #too academic? let's discuss when pairing.
   let(:rock){:rock}
   let(:paper){:paper}
   context ".winner?()" do
