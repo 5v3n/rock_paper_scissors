@@ -1,3 +1,5 @@
+require_relative '../rock_paper_scissors.rb'
+
 module RockPaperScissors::Strategy 
   class Base
     def choice
