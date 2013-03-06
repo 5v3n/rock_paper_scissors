@@ -13,6 +13,8 @@ describe RockPaperScissors::Player do
     end
   end
   context ".choice()" do
-    pending
+    it "works for default constructor instances" do
+      RockPaperScissors::Player.new.choice.should be
+    end
   end
 end
