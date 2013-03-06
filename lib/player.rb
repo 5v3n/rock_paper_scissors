@@ -1,5 +1,5 @@
-require_relative './rock_paper_scissors.rb'
-require_relative './strategy/random.rb'
+require_relative 'rock_paper_scissors'
+require_relative 'strategy/random'
 
 class RockPaperScissors::Player
   attr_accessor :chooser

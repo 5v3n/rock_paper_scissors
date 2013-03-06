@@ -1,4 +1,4 @@
-require_relative './rock_paper_scissors.rb'
+require_relative 'rock_paper_scissors'
 
 class RockPaperScissors::Logic
   BEATS = {scissors: :paper, paper: :rock, rock: :scissors}

@@ -1,8 +1,7 @@
-require 'rock_paper_scissors'
-
-require 'player'
-require 'logic'
-require 'strategy/constant'
+require_relative 'rock_paper_scissors'
+require_relative 'player'
+require_relative 'logic'
+require_relative 'strategy/constant'
 
 class RockPaperScissors::Tournament
   def self.play
