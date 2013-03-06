@@ -2,7 +2,7 @@ require 'spec_helper'
 require_relative '../lib/player.rb'
 
 describe RockPaperScissors::Player do
-  context ".new()" do
+  context "#new()" do
     let(:unknown_parameter){'wooza_booza!!'}
     it "handles an unknown option" do
       lambda {RockPaperScissors::Player.new(unknown_parameter)}.should raise_error(ArgumentError, /#{unknown_parameter.class}/)
@@ -11,5 +11,8 @@ describe RockPaperScissors::Player do
       player = RockPaperScissors::Player.new
       player.chooser.class.to_s.should == 'RockPaperScissors::Strategy::Random'
     end
+  end
+  context ".choice()" do
+    pending
   end
 end
