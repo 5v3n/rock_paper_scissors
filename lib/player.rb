@@ -1,20 +1,15 @@
 require_relative './rock_paper_scissors.rb'
 
 class RockPaperScissors::Player
-  AVAILABLE_OPTIONS = RockPaperScissors::AVAILABLE_OPTIONS + [:random]
-  attr_reader :strategy
-  def initialize(strategy=:random)
-    if AVAILABLE_OPTIONS.include?strategy
-      @strategy = strategy 
+  attr_accessor :chooser
+  def initialize(strategy=RockPaperScissors::Strategy::Random.new)
+    if strategy.is_a? RockPaperScissors::Strategy::Base
+      @chooser = strategy
     else
-      raise ArgumentError, "#{strategy} not valid. Valid options are #{AVAILABLE_OPTIONS}."
+      raise ArgumentError, "#{strategy.class} is not a subclass of #{RockPaperScissors::Strategy::Base}"
     end
   end
   def choice
-    if @strategy == :random
-      RockPaperScissors::AVAILABLE_OPTIONS.shuffle.first
-    else
-      @strategy
-    end
+    @chooser.choice
   end
 end

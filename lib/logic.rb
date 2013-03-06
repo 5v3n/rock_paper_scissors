@@ -19,7 +19,7 @@ private
     end
   end
   def self.valid_arguments()
-    BEATS.flatten.uniq
+    RockPaperScissors::AVAILABLE_OPTIONS
   end
   def self.error_message(param)
     "parameter '#{param ||= 'nil'}' invalid - valid arguments are #{valid_arguments}"
