@@ -9,7 +9,7 @@ class RockPaperScissors::TournamentController
     @total_rounds  = results[:rounds]
     @ties          = results[:ties]
   end
-  def get_binding # this is only a helper method to access the objects binding method
+  def retrieve_binding # this is only a helper method to access the objects binding method
     binding
   end
 end
