@@ -1,7 +1,7 @@
 require 'erb'
 require_relative 'tournament'
 
-class TournamentController
+class RockPaperScissors::TournamentController
   def index
     results       = RockPaperScissors::Tournament.play
     @player_a_wins = results[:wins_player_a]
