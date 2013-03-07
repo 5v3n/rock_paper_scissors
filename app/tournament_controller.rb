@@ -14,7 +14,7 @@ class RockPaperScissors::TournamentController
     binding
   end
   def render(template)
-    template_string = File.new(File.expand_path("../../lib/#{template}.erb", __FILE__)).read
+    template_string = File.new(File.expand_path("../../app/#{template}.erb", __FILE__)).read
     template = ERB.new template_string
     template.result(retrieve_binding)
   end

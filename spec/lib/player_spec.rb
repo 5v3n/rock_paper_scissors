@@ -1,5 +1,5 @@
 require 'spec_helper'
-require_relative '../lib/player.rb'
+require_relative '../../lib/player.rb'
 
 describe RockPaperScissors::Player do
   context "#new()" do

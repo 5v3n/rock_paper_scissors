@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-require_relative '../../lib/strategy/constant.rb'
+require_relative '../../../lib/strategy/constant.rb'
 
 describe RockPaperScissors::Strategy::Constant do
   context ".choice()" do

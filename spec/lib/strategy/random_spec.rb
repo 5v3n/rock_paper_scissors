@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-require_relative '../../lib/strategy/random.rb'
+require_relative '../../../lib/strategy/random.rb'
 
 describe RockPaperScissors::Strategy::Random do
   context ".choice()" do

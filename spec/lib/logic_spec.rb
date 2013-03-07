@@ -1,5 +1,5 @@
 require 'spec_helper'
-require_relative '../lib/logic.rb'
+require_relative '../../lib/logic.rb'
 
 describe RockPaperScissors::Logic do
   let(:scissors){:scissors} #too academic? let's discuss when pairing.

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-require_relative '../lib/tournament_controller.rb'
+require_relative '../../app/tournament_controller.rb'
 
 describe RockPaperScissors::TournamentController do
   context ".index()" do

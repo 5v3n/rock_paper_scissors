@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-require_relative '../lib/tournament.rb'
+require_relative '../../app/tournament.rb'
 
 describe RockPaperScissors::Tournament do
 # Das Spiel sollte beide Spieler 100x gegeneinander spielen lassen. Die Ausgabe des Programms soll folgendes Format haben (mit ggf. anderen Zahlen):
