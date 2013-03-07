@@ -13,9 +13,3 @@ class TournamentController
     binding
   end
 end
-
-controller = TournamentController.new
-controller.index
-template_string = File.new(File.expand_path("../tournament_view.erb", __FILE__)).read
-template = ERB.new template_string
-puts template.result(controller.get_binding)
