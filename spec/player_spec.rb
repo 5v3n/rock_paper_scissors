@@ -9,7 +9,7 @@ describe RockPaperScissors::Player do
     end
     it "copes with no input choosing the random strategy" do
       player = RockPaperScissors::Player.new
-      player.chooser.class.to_s.should == 'RockPaperScissors::Strategy::Random'
+      player.instance_variable_get(:@chooser).class.to_s.should == 'RockPaperScissors::Strategy::Random'
     end
   end
   context ".choice()" do
